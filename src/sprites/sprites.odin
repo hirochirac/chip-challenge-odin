@@ -16,11 +16,18 @@ getSprites :: proc(file_name: cstring) -> ry.Texture2D {
 	return t
 }
 
+/**
+*
+*/
 load_tile_map :: proc(file_name: cstring) -> ry.Image {
 	t: ry.Image = ry.LoadImage(file_name)
 	return t
 }
 
+
+/**
+*
+*/
 draw_tile :: proc(i: ry.Image, source: ry.Rectangle, distination: ry.Rectangle) {
 	t: ry.Texture2D = ry.LoadTextureFromImage(i)
 	ry.DrawTexturePro(t, source, distination, ry.Vector2{0, 0}, 0, ry.WHITE)
